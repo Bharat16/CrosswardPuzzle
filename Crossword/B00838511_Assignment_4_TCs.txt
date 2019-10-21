@@ -1,0 +1,34 @@
+Test Cases:
+
+loadPuzzle()
+-add new puzzle with zero rows and columns
+-add new puzzle with single row and column
+-add new puzzle with multiple rows and columns
+-add new puzzle with only rows but zero columns
+-add new puzzle with only columns but zero rows
+-add new puzzle with no words
+-add new puzzle with single words
+-add new puzzle with multiple words
+-add new puzzle with words more than the puzzle limit
+
+solve()
+-solve a puzzle with no solution
+-solve a puzzle single solution
+-solve a puzzle multiple solutions
+-solve a puzzle with single word
+-solve a puzzle with multiple words
+-solve a puzzle where same word is present twice
+
+
+print()
+-print an empty puzzle
+-print a puzzle with no solution
+-print a puzzle with single solution
+-print a puzzle with multiple solution
+-print without loading puzzle
+-print unsloved puzzle
+-print solved puzzle
+
+choices()
+-print choices after solving the puzzle
+-print choices for a puzzle with no solution

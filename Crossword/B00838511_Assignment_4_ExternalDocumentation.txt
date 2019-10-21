@@ -1,0 +1,64 @@
+﻿Overview 
+--------
+
+This program works on solving a crossword puzzle.
+A summary of the formatting requirements are in the csci 3901 course assignment #4 information in the course's brightspace space.
+
+The user provides the rows, columns and words with their starting position as the input.
+The program then works on placing the words on their specific postition and thus solving the puzzle with providing number of attempts in solving the puzzle.
+
+
+
+Files and external data
+-----------------------
+
+These are the main files:
+  - FillInPuzzle.java  		-- to perform various operations like reading, solving and printing the puzzle.
+  - Placeholder.java  		-- to store the position of a word where it's stored in the array.
+  
+
+
+Data structures and their relations to each other
+-------------------------------------------------
+   - Grid 			-- The crossword puzzle grid is stored in 2 dimensional array of type character
+   - ArrayList 			-- Creating an arraylist of sets where each set contains the word of same length
+   - Stack placeholder 	-- the position of each word is stored in the stack as where the word is stored in the grid
+
+Assumptions
+-----------
+
+  - All words will fill either top to bottom or left to right.
+  - No word is repeated in the crossword
+  - The words in the puzzle  are case insensitive
+
+Choices
+-------
+
+  - load puzzle			-- user can select to read the puzzle from input
+  - solve puzzle		-- user can select to solve the puzzle
+  - print			-- user can select to print the puzzle
+
+
+Key algorithms and design elements
+----------------------------------
+
+The program reads input in different parts.
+1. First line as number of rows, number of columns and number of words as string and then create an array with the rows and columns provided with each element filled with " ".
+2. As per the number of words provided in first line it will read n lines with n as number of words and store the position and word alignment of each word as provide by user eg-"0 0 4 h" where 0,0 are the word co-ordinate and 4 is word length and h for horizontal alignment and will put "#" as horizontally for four elements starting from 0,0 left to right.
+3. It will take n line as the words as strings as provided by the user in the first line and puts all the words inside a arraylist.
+
+After taking the input the program will pop a position from the placeholder stack and then will try to place a word of same length from the arraylist as specified in the placeholder.
+Eg- if the placeholder will provide a position (0,0) and length of the word is 5 the it will try to place a 5 length word at that position and will do for other positions.
+If all the words are perfectly placed and puzzle is solved then it will return true else will repeat the same process until no solution is found and will return false.
+
+The design will include the following functions:-
+ - loadPuzzle() -- load/create the puzzle. It will accept the grid size and number of words, their positions and will create a grid accordingly.
+ - solve ()     -- it will solve the puzzle.
+ - print()      -- it will print the puzzle.
+
+
+
+Limitations
+-----------
+
+-Word length cannot exceed 20 characters.
